@@ -29,7 +29,7 @@ const digitalWork = [
       "GitHub",
       "Vercel",
     ],
-    link: "https://st-marks-demo.vercel.app",
+    link: "https://kilimo-lv.vercel.app",
     linkText: "View Live Project",
   },
 ];
