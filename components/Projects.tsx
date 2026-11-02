@@ -31,7 +31,26 @@ const projects = [
     link: "https://github.com/ianesipisu099-commits/financial-markets-python-analysis",
     linkText: "View on GitHub",
     external: true,
-  },
+  
+},
+{
+    number: "04",
+    title: "Retail Profitability Analysis",
+    category: "SQL · PostgreSQL",
+    description:
+      "An end-to-end retail analytics project investigating sales performance, discount strategies, product profitability and returns using PostgreSQL.",
+    tags: [
+      "PostgreSQL",
+      "SQL",
+      "Data Analysis",
+      "Profitability Analysis",
+      "Business Intelligence",
+    ],
+    link: "https://github.com/ianesipisu099-commits/retail-profitability-analysis",
+    linkText: "View on GitHub",
+    external: true,
+},
+
 ];
 
 export default function Projects() {
@@ -56,7 +75,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <a
               key={project.number}
