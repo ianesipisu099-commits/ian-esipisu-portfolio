@@ -1,3 +1,4 @@
+
 const projects = [
   {
     number: "01",
@@ -23,6 +24,24 @@ const projects = [
   },
   {
     number: "03",
+    title: "Loan Portfolio & Credit Risk Analysis",
+    category: "SQL · Excel · Financial Analysis",
+    description:
+      "Analysis of 39,717 historical LendingClub loans using PostgreSQL and Excel to evaluate portfolio performance, repayment outcomes, borrower risk and loan characteristics.",
+    tags: [
+      "PostgreSQL",
+      "SQL",
+      "Excel",
+      "Credit Risk",
+      "Portfolio Analysis",
+      "Data Visualization",
+    ],
+    link: "https://github.com/ianesipisu099-commits/loan-portfolio-analysis",
+    linkText: "View on GitHub",
+    external: true,
+  },
+  {
+    number: "04",
     title: "Financial Markets & Portfolio Risk",
     category: "Python · Financial Analysis",
     description:
@@ -31,10 +50,9 @@ const projects = [
     link: "https://github.com/ianesipisu099-commits/financial-markets-python-analysis",
     linkText: "View on GitHub",
     external: true,
-  
-},
-{
-    number: "04",
+  },
+  {
+    number: "05",
     title: "Retail Profitability Analysis",
     category: "SQL · PostgreSQL",
     description:
@@ -49,8 +67,7 @@ const projects = [
     link: "https://github.com/ianesipisu099-commits/retail-profitability-analysis",
     linkText: "View on GitHub",
     external: true,
-},
-
+  },
 ];
 
 export default function Projects() {
