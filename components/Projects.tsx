@@ -46,9 +46,12 @@ const projects = [
       "Portfolio Analysis",
       "Data Visualization",
     ],
-    link: "https://github.com/ianesipisu099-commits/loan-portfolio-analysis",
-    linkText: "View on GitHub",
-    external: true,
+    link: "/projects/loan-portfolio-analysis",
+    linkText: "View Case Study",
+    external: false,
+    secondaryLink:
+      "https://github.com/ianesipisu099-commits/loan-portfolio-analysis",
+    secondaryLinkText: "View on GitHub",
   },
   {
     number: "04",
@@ -62,26 +65,29 @@ const projects = [
     link: "https://github.com/ianesipisu099-commits/financial-markets-python-analysis",
     linkText: "View on GitHub",
     external: true,
-  },
-  {
-    number: "05",
-    title: "Retail Profitability Analysis",
-    category: "SQL · PostgreSQL",
-    description:
-      "An end-to-end retail analytics project investigating sales performance, discount strategies, product profitability and returns using PostgreSQL.",
-    image: "/images/projects/retail-profitability-preview.png",
-    imageAlt: "Retail Profitability Analysis preview",
-    tags: [
-      "PostgreSQL",
-      "SQL",
-      "Data Analysis",
-      "Profitability Analysis",
-      "Business Intelligence",
-    ],
-    link: "https://github.com/ianesipisu099-commits/retail-profitability-analysis",
-    linkText: "View on GitHub",
-    external: true,
-  },
+  }, 
+{
+  number: "05",
+  title: "Retail Profitability Analysis",
+  category: "SQL · PostgreSQL",
+  description:
+    "An end-to-end retail analytics project investigating sales performance, discount strategies, product profitability and returns using PostgreSQL.",
+  image: "/images/projects/retail-profitability-preview.png",
+  imageAlt: "Retail Profitability Analysis preview",
+  tags: [
+    "PostgreSQL",
+    "SQL",
+    "Data Analysis",
+    "Profitability Analysis",
+    "Business Intelligence",
+  ],
+  link: "/projects/retail-profitability-analysis",
+  linkText: "View Case Study",
+  external: false,
+  secondaryLink:
+    "https://github.com/ianesipisu099-commits/retail-profitability-analysis",
+  secondaryLinkText: "View on GitHub",
+},
 ];
 
 export default function Projects() {
@@ -179,19 +185,26 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-cyan-400">
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold">
                 <a
                   href={project.link}
                   target={project.external ? "_blank" : undefined}
                   rel={project.external ? "noopener noreferrer" : undefined}
-                  className="transition-colors hover:text-cyan-300"
+                  className="text-cyan-400 transition-colors hover:text-cyan-300"
                 >
-                  {project.linkText}
+                  {project.linkText} →
                 </a>
 
-                <span className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
+                {"secondaryLink" in project && project.secondaryLink && (
+                  <a
+                    href={project.secondaryLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 transition-colors hover:text-white"
+                  >
+                    {project.secondaryLinkText} ↗
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -226,3 +239,4 @@ export default function Projects() {
     </section>
   );
 }
+
