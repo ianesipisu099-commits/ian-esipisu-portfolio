@@ -6,6 +6,8 @@ const projects = [
     category: "Power BI · Data Analytics",
     description:
       "Interactive analysis of Kenya's economic, labor and digital development using World Bank indicators from 2000–2025.",
+    image: "/images/projects/Dashboard.png",
+    imageAlt: "Kenya Development Dashboard preview",
     tags: ["Power BI", "DAX", "Power Query", "World Bank Data"],
     link: "/projects/kenya-development-dashboard",
     linkText: "View Project",
@@ -17,6 +19,8 @@ const projects = [
     category: "SQL · PostgreSQL",
     description:
       "Analysis of approximately 100,000 e-commerce orders covering sales trends, product performance, customer behavior and RFM segmentation.",
+    image: "/images/projects/retail-sales-customer-preview.png",
+    imageAlt: "Retail Sales and Customer Analytics preview",
     tags: ["PostgreSQL", "SQL", "CTEs", "Window Functions", "RFM"],
     link: "https://github.com/ianesipisu099-commits/retail-sql-analytics",
     linkText: "View on GitHub",
@@ -28,6 +32,8 @@ const projects = [
     category: "SQL · Excel · Financial Analysis",
     description:
       "Analysis of 39,717 historical LendingClub loans using PostgreSQL and Excel to evaluate portfolio performance, repayment outcomes, borrower risk and loan characteristics.",
+    image: "/images/projects/loan-portfolio-risk-preview.png",
+    imageAlt: "Loan Portfolio and Credit Risk Analysis preview",
     tags: [
       "PostgreSQL",
       "SQL",
@@ -46,6 +52,8 @@ const projects = [
     category: "Python · Financial Analysis",
     description:
       "Cross-asset analysis of returns, volatility, correlation, drawdowns and portfolio diversification using historical market data.",
+    image: "/images/projects/financial-markets-risk-preview.png",
+    imageAlt: "Financial Markets and Portfolio Risk preview",
     tags: ["Python", "Pandas", "NumPy", "Matplotlib", "yfinance"],
     link: "https://github.com/ianesipisu099-commits/financial-markets-python-analysis",
     linkText: "View on GitHub",
@@ -57,6 +65,8 @@ const projects = [
     category: "SQL · PostgreSQL",
     description:
       "An end-to-end retail analytics project investigating sales performance, discount strategies, product profitability and returns using PostgreSQL.",
+    image: "/images/projects/retail-profitability-preview.png",
+    imageAlt: "Retail Profitability Analysis preview",
     tags: [
       "PostgreSQL",
       "SQL",
@@ -99,7 +109,7 @@ export default function Projects() {
               href={project.link}
               target={project.external ? "_blank" : undefined}
               rel={project.external ? "noopener noreferrer" : undefined}
-              className="group flex min-h-[390px] flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40"
+              className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40"
             >
               <div className="flex items-center justify-between">
                 <span className="text-sm font-semibold text-cyan-400">
@@ -111,7 +121,16 @@ export default function Projects() {
                 </span>
               </div>
 
-              <h3 className="mt-10 text-2xl font-bold leading-tight">
+              <div className="mt-6 aspect-video overflow-hidden rounded-xl border border-white/10 bg-[#111827]">
+                <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 className="mt-7 text-2xl font-bold leading-tight">
                 {project.title}
               </h3>
 
